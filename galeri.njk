@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/assets/css/profile.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/mode_malam.css">
+</head>
+<body id="dark-mode">
+	<script src="/assets/javascript/dark_mode.js"></script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
         <title>My Website</title>
         <style>
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
@@ -241,6 +258,18 @@ nav.menu ul a:hover {
 		margin:-5% 0 25px -5%;
 	}			
 }
+.darkmode--activated p, .darkmode--activated li {
+  color: #000;
+}
+
+.button {
+  isolation: isolate;
+}
+
+.darkmode--activated .logo {
+  mix-blend-mode: difference;
+}
+
 </style>
     </head>
     <body>
@@ -281,5 +310,27 @@ nav.menu ul a:hover {
                 </div>
             </div>
         </div>
+		<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+		<script>
+		new Darkmode().showWidget();
+		</script>
+		<script>
+		const options = {
+			bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+		const darkmode = new Darkmode(options);
+  		darkmode.showWidget();
+	</script>
     </body>
 </html
